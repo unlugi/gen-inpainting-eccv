@@ -31,8 +31,10 @@
   '/raid/users/geunlu/datasets/inpainting/stil-nonmasked/test/imagefiles.flist'
   ]
 * GLS_GAMMA: 0.001 # Generalized Loss Sensitive GAN loss gamma parameter
-* GLS_SLOPE: 0.3	 # Generalized Loss Sensitive GAN loss slope parameter
+* GLS_SLOPE: 0.5	 # Generalized Loss Sensitive GAN loss slope parameter
+* WGANGP_LAMBDA: 5
 
 ## Testing Durations
 * Testing will take ~12 hours for 6160 images. The reason for this is the network used in this project can only make predictions for a fixed sized image HxW, but the challege dataset contains images with different sizes. Therefore in test_multi.py the network is initialized for each testing image from scratch.
+* In order to avoid out-of-memomry errors during training, use test_multi_2.py . The only difference of this script from test_multi.py is that it resizes some bigger-sized images to fit gpu-memory
 

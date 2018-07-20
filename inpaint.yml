@@ -8,7 +8,7 @@ MODEL_RESTORE: 'release_places2_256' #'release_places2_256' #'release_imagenet_2
 GAN: 'glsgan_gp'  # 'dcgan', 'lsgan', 'wgan_gp', 'one_wgan_gp', 'lsgan_gp' , 'glsgan_gp'
 PRETRAIN_COARSE_NETWORK: False
 GAN_LOSS_ALPHA: 0.001  # dcgan: 0.0008, wgan: 0.0005, onegan: 0.001
-WGAN_GP_LAMBDA: 10
+WGAN_GP_LAMBDA: 5
 COARSE_L1_ALPHA: 1.2
 L1_LOSS_ALPHA: 1.2
 AE_LOSS_ALPHA: 1.2
@@ -19,7 +19,7 @@ PADDING: 'SAME'
 
 # Generalized Loss Sensitive GAN params
 GLS_GAMMA: 0.001
-GLS_SLOPE: 0.3
+GLS_SLOPE: 0.5
 
 # training
 NUM_GPUS: 1
